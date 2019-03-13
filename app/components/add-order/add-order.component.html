@@ -1,0 +1,58 @@
+<button class="btn btn-warning" (click)="show='breakfast'">Desayuno</button>
+<button class="btn btn-warning ml-3" (click)="show='lunchAndDinner'">Almuerzo y Cena</button>
+
+<div class="d-none" [ngClass]="{'d-block':show=='breakfast'}">
+
+  <form (ngSubmit)="add()">
+
+    <input type="text" placeholder="Nombre Cliente" name="name" class="form-control mt-3" [(ngModel)]="item.name">
+
+    <div *ngFor="let BUTTON of BUTTONS">
+      <button class="mt-3" type="button" value="BUTTON.order"
+        (click)="clickedButton(BUTTON.order)">{{BUTTON.order}}</button>
+    </div>
+
+    <button class="btn btn-warning mt-3 mb-3" type="submit">submit</button>
+  </form>
+
+</div>
+
+<div div class="d-none" [ngClass]="{'d-block':show=='lunchAndDinner'}">
+
+  <form (ngSubmit)="add()">
+
+    <input type="text" placeholder="Nombre Cliente" name="name" class="form-control mt-3" [(ngModel)]="item.name">
+
+    <div *ngFor="let lBUTTON of lBUTTONS">
+      <button class="mt-3" type="button" value="lBUTTON.order"
+        (click)="clickedButton(lBUTTON.order)">{{lBUTTON.order}}</button>
+    </div>
+
+    <button class="btn btn-warning mt-3 mb-3" type="submit">submit</button>
+  </form>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="d-none" [ngClass]="{'d-block':show=='breakfast'}">
+    <app-order-buttons color="red" text="Café Americano $ 500" (click)="handleClick()">Press me!</app-order-buttons>
+    <app-order-buttons color="red" text="Café con Leche $ 700" (click)="handleClick()">Press me!</app-order-buttons>
+    <app-order-buttons color="red" text="Sandwich de jamón y queso $ 1000" (click)="handleClick()">Press me!</app-order-buttons>
+    <app-order-buttons color="red" text="Jugo natural $ 700" (click)="handleClick()">Press me!</app-order-buttons>
+  </div>
+  
+  <div class="d-none" [ngClass]="{'d-block':show=='lunchAndDinner'}">
+      <app-order-buttons color="red" text="Hamburguesa Simple $ 1500" (click)="handleClick()">Press me!</app-order-buttons>
+      <app-order-buttons color="red" text="Hamburguesa Doble $ 2500" (click)="handleClick()">Press me!</app-order-buttons>
+      <app-order-buttons color="red" text="Papas Fritas $ 500" (click)="handleClick()">Press me!</app-order-buttons>
+      <app-order-buttons color="red" text="Onion Rings$ 500" (click)="handleClick()">Press me!</app-order-buttons>
+  </div> -->

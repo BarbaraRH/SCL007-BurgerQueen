@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+
 import { AppComponent } from './app.component';
 
 import { AngularFireModule } from '@angular/fire';
@@ -33,7 +34,7 @@ import { FormsModule } from '@angular/forms';
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
     AngularFireStorageModule, // imports firebase/storage only needed for storage features
-    FormsModule
+    FormsModule,
   ],
   providers: [{ provide: FirestoreSettingsToken, useValue: {} }, ConnectionService],
   bootstrap: [AppComponent]

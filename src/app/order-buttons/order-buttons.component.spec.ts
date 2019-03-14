@@ -2,15 +2,18 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { OrderButtonsComponent } from './order-buttons.component';
 
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
 describe('OrderButtonsComponent', () => {
   let component: OrderButtonsComponent;
   let fixture: ComponentFixture<OrderButtonsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ OrderButtonsComponent ]
+      declarations: [OrderButtonsComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

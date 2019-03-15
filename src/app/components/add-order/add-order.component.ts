@@ -12,6 +12,8 @@ import { isNgTemplate } from '@angular/compiler';
 
 export class AddOrderComponent implements OnInit {
 
+  show: any = "";
+
   BUTTONS = [
     { order: "Café americano", cost: 500 },
     { order: "Cafe con leche", cost: 700 },
@@ -50,6 +52,8 @@ export class AddOrderComponent implements OnInit {
   add() {
     this.service.addItem(this.item);
     this.item.name = '';
+    this.item.order = [],
+      this.item.cost = 0
   }
 
   clickedButton(value: any, price: number) {

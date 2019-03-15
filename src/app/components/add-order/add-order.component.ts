@@ -36,7 +36,8 @@ export class AddOrderComponent implements OnInit {
 
   item: any = {
     name: '',
-    order: []
+    order: [],
+    cost: 0
   }
 
   constructor(private service: ConnectionService) { }
@@ -49,14 +50,11 @@ export class AddOrderComponent implements OnInit {
   add() {
     this.service.addItem(this.item);
     this.item.name = '';
-
   }
 
-  clickedButton(value: any) {
+  clickedButton(value: any, price: number) {
     (this.item.order).push(value);
-    /* this.item.order = value; */
-    /* this.service.addItem(this.item);
-    this.item.order = ''; */
+    this.item.cost += price;
   }
 
 }

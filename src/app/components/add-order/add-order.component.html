@@ -1,5 +1,5 @@
-<button class="btn btn-warning" (click)="show='breakfast'">Desayuno</button>
-<button class="btn btn-warning ml-3" (click)="show='lunchAndDinner'">Almuerzo y Cena</button>
+<button class="btn btn-success" (click)="show='breakfast'">Desayuno</button>
+<button class="btn btn-success ml-3" (click)="show='lunchAndDinner'">Almuerzo y Cena</button>
 
 <div class="d-none" [ngClass]="{'d-block':show=='breakfast'}">
 
@@ -12,7 +12,7 @@
         (click)="clickedButton(BUTTON.order, BUTTON.cost)">{{BUTTON.order}}</button>
     </div>
 
-    <button class="btn btn-warning mt-3 mb-3" type="submit">submit</button>
+    <button class="btn btn-success mt-3 mb-3" type="submit">submit</button>
   </form>
 
 </div>

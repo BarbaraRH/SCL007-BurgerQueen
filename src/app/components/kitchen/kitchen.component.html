@@ -1,25 +1,25 @@
-<table class="table">
-  <!-- <thead>
+<div class="container">
+
+  <table class="table mt-3">
+    <thead>
       <tr>
         <th scope="col">Cliente</th>
-        <th scope="col">ID</th>
         <th scope="col">Orden</th>
         <th scope="col">Total</th>
-  
       </tr>
-    </thead> -->
-  <tbody>
-    <tr class="alert alert-success" role="alert" *ngFor="let item of items">
-      <td>{{item.name}}</td>
-      <td>
-    <tr *ngFor="let order of item.order">
-      {{order.value}}
-    </tr>
-    </td>
-    <td>${{item.total}}</td>
-    </tr>
-  </tbody>
+    </thead>
+    <tbody>
+      <tr class="alert alert-success" role="alert" *ngFor="let item of items">
+        <td>{{item.name}}</td>
+        <td>
+      <tr *ngFor="let order of item.order">
+        {{order.value}}
+      </tr>
+      </td>
+      <td>${{item.total}}</td>
+      </tr>
+    </tbody>
 
+  </table>
 
-
-</table>
+</div>

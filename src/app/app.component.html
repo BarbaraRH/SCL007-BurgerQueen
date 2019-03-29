@@ -1,24 +1,8 @@
 <h1 class="bg-dark text-white text-center py-4">Burguer Queen</h1>
 
-
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-md-6">
-      <app-add-order></app-add-order>
-    </div>
-    <div class="col-md-6">
-      <app-list></app-list>
-    </div>
-  </div>
+<div class="container">
+  <button class="btn btn-warning lg mt-8" routerLink="/order">Pedido</button>
+  <button class="btn btn-warning lg mt-8 ml-3" routerLink="/kitchen">Cocina</button>
 </div>
 
-
-
-  
-
-
-
-
-
-
-
+<router-outlet></router-outlet>

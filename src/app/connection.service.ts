@@ -5,9 +5,7 @@ import { Observable } from 'rxjs';
 
 import { map } from 'rxjs/operators';
 
-
-
-export interface Item { name: string, order: string }
+export interface Item { name: string, order: any, total: number }
 
 @Injectable({
   providedIn: 'root'
@@ -34,4 +32,5 @@ export class ConnectionService {
   addItem(item: Item) {
     this.itemsCollection.add(item);
   }
+
 }

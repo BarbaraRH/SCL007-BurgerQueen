@@ -8,11 +8,11 @@ import { Observable } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  /* breakfast:boolean = false;
-  lunchAndDinner:boolean = false; */
+  title = 'burgerQueenI';
 
   items: Observable<any[]>;
   constructor(db: AngularFirestore) {
     this.items = db.collection('items').valueChanges();
   }
+
 }
